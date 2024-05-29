@@ -25,21 +25,6 @@ export const Projects = () => {
             description: "Design & Development",
             imgUrl: projImg3,
           },
-          {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
-          },
-          {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg2,
-          },
-          {
-            title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg3,
-          },
     ]
     return (
         <section className="project" id="projects">
@@ -75,10 +60,30 @@ export const Projects = () => {
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                                    Loren Ipsum
+                            <Row>
+                                    {
+                                        projects.map((project,index) => {
+                                            return (
+                                                <ProjectCard
+                                                key={index}
+                                                {...project}/>
+                                            )
+                                        })
+                                    }
+                                </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
-                                    Loren Ipsum
+                            <Row>
+                                    {
+                                        projects.map((project,index) => {
+                                            return (
+                                                <ProjectCard
+                                                key={index}
+                                                {...project}/>
+                                            )
+                                        })
+                                    }
+                                </Row>
                             </Tab.Pane>
                         </Tab.Content>
                         </TabContainer>
