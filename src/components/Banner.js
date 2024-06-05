@@ -2,11 +2,18 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import { useState, useEffect } from "react";
 import headerImg from "../assets/img/header-img.svg";
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
+import { HashLink } from 'react-router-hash-link';
+import {
+    BrowserRouter as Router
+  } from "react-router-dom";
+
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+    const toRotate = ["Web Developer", "Software Engineer", "Data Analyst"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300-Math.random()*100);
     const period = 2000;
@@ -39,24 +46,33 @@ export const Banner = () => {
         }
     }
     return (
+        <Router>
         <section className="banner" id="home">
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">
-                            Welcome to my Portfolio
-                        </span>
-                        <h1>
-                            {"Hi I'm Michael Liang: "}<span className="wrap">{text}</span>
-                        </h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <button className="vvd" onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25}></ArrowRightCircle></button>
+                        <TrackVisibility>
+                        {({ isVisible }) => 
+                            <div className={isVisible ? "animated__animate animate__fadeIn" : ""}>
+                            <span className="tagline">
+                                Welcome to my Portfolio
+                            </span>
+                            <h1>
+                                {"Hi I'm Michael Liang: "}<span className="wrap">{text}</span>
+                            </h1>
+                            <p>Hi there! My name is Michael Liang. I completed my Master of Software Engineering at the University of California, Irvine. I received my bachelor's in Mathematical Computing from the University of Massachusetts, Amherst.</p>
+                             <HashLink to='#connect'>
+                                <button className="vvd">Let’s Connect <ArrowRightCircle size={25}></ArrowRightCircle></button>
+                             </HashLink>
+                            </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Headder Img" />
                     </Col>
                 </Row>
             </Container>
-        </section>  
+        </section>
+        </Router>  
     )
 }

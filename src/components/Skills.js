@@ -33,19 +33,19 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>I have experience with coding in languages such as Java, Python, JavaScript, and SQL through various projects, <br></br> some of which you can find below!</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>Java</h5>
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <h5>Python</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <h5>Database</h5>
                             </div>
                             <div className="item">
                                 <img src={meter1} alt="Image" />
