@@ -2,8 +2,9 @@ import { Col, Container, Row, Tab, TabContainer } from "react-bootstrap"
 import Nav from 'react-bootstrap/Nav';
 import { ProjectCard } from "./ProjectCards";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
+import projImg1 from "../assets/img/Mugic.png";
+import projImg2 from "../assets/img/BankingAPP.png";
+import projImg3 from "../assets/img/Mindustry.jpeg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -12,21 +13,21 @@ export const Projects = () => {
 
     const projects1 = [
         {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "MUGIC APP",
+            description: " A Desktop App that allows users to connect to a proprietary MUGIC device. The motion of the arm is tracked during physical therapy, and visual/audio feedback is given to encourage patient healing.",
             imgUrl: projImg1,
           },
           {
-            title: "Business Startup",
-            description: "Design & Development",
+            title: "BANKING APP",
+            description: "a secure web-based banking app using Java Spring Boot And developed features for easy registration, account management, and secure transactions, improving accessibility and convenience for users.",
             imgUrl: projImg2,
           },
     ]
     const projects2 = [
         {
             title: "Business Startup",
-            description: "Design & Development",
-            imgUrl: projImg1,
+            description: "Designed and implemented the kick player feature in the multiplayer module, enabling player vote modifications, administrator intervention, and mandatory reasons for vote kick sessions.",
+            imgUrl: projImg3,
           },
     ]
     const projects3 = [
